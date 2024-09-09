@@ -1,5 +1,3 @@
-git show-ref
-
 pipeline {
     agent any
     stages {
@@ -16,6 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                sh 'git show-ref'
             }
         }
     }
