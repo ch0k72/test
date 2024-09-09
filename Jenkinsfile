@@ -1,3 +1,5 @@
+git show-ref
+
 pipeline {
     agent any
     stages {
