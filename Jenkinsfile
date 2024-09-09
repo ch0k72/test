@@ -1,20 +1,10 @@
-# groovy
+/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent any
+    agent { docker { image 'golang:1.23.1-alpine3.20' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                // Your build steps here
-            }
-        }
-        stage('Test') {
-            steps {
-                // Your test steps here
-            }
-        }
-        stage('Deploy') {
-            steps {
-                // Your deployment steps here
+                sh 'go version'
             }
         }
     }
