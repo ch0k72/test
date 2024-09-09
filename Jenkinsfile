@@ -1,10 +1,20 @@
-/* Requires the Docker Pipeline plugin */
+# groovy
 pipeline {
-    agent { docker { image 'maven:3.9.9-eclipse-temurin-21-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'mvn --version'
+                // Your build steps here
+            }
+        }
+        stage('Test') {
+            steps {
+                // Your test steps here
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Your deployment steps here
             }
         }
     }
